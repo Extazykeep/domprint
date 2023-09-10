@@ -1,0 +1,42 @@
+#devices-count {
+    background-color: #b2b2b2;
+    .device-item {
+        position: relative;
+        padding: 1em;
+        border: 2px solid $main_color;
+        border-top: none;
+        @media (min-width: 1200px) {
+            max-width: 230px;
+            margin: auto;
+        }
+        &__count {
+            font-size: 48px;
+        }
+        &__icon {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            i {
+                font-size: 2.25em;
+            }
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                height: 2px;
+                top: 50%;
+                background-color: $main_color;
+                width: calc(50% - 40px);
+            }
+            &::before {
+                left: 0;
+            }
+            &::after {
+                right: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+#our-services {
+    background-repeat: no-repeat;
+    background-position: 100% 10%;
+    .service-item {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid #fff;
+        padding: 1em;
+        padding-bottom: 0;
+        height: 100%;
+        &__icon {
+            height: 50px;
+            i {
+                font-size: 2em;
+            }
+        }
+        @media (min-width: 992px) {
+            padding: 2em;
+            padding-bottom: 0;
+        }
+        &__text {
+            flex-grow: 1;
+        }
+        button {
+            background-color: #fff;
+            border: none;
+            color: #fd583a;
+            transform: translateY(50%);
+            align-self: center;
+        }
+    }
+}

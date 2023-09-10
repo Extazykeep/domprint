@@ -1,0 +1,48 @@
+#reviews {
+    .review-item {
+        position: relative;
+        &__quotes {
+            position: absolute;
+            font-size: 4.5em;
+            line-height: 1;
+            opacity: 0.1;
+            left: 0px;
+            top: -10px;
+            @media (min-width: 576px) {
+                left: 30px;
+            }
+        }
+        &__image {
+            img {
+                border-radius: 50%;
+                outline: 1px solid $main_color;
+                outline-offset: 4px;
+            }
+        }
+        &__text {
+            @media (min-width: 576px) {
+                margin: auto;
+                max-width: 80%;
+            }
+        }
+    }
+    #reviews-carousel {
+        .carousel-control-prev,
+        .carousel-control-next {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            width: 30px;
+            height: 50px;
+            background-color: $main_color;
+        }
+        &:hover {
+            .carousel-control-prev,
+            .carousel-control-next {
+                opacity: 1;
+            }
+        }
+    }
+}

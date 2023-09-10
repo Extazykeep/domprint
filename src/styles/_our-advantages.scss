@@ -1,0 +1,75 @@
+#our-advantages {
+    background-color: #f5f5f5;
+    .section-title {
+        font-size: calc(1.65rem + 0.9vw);
+        @media (min-width: 1200px) {
+            font-size: 2rem;
+        }
+    }
+    .accordion-item {
+        border: none;
+        position: relative;
+        z-index: 2;
+        background-color: transparent;
+        .accordion-header {
+            .icon {
+                width: 55px;
+                height: 55px;
+                background-color: $main_color;
+                border-radius: 50%;
+                flex-shrink: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: box-shadow 0.5s;
+                i {
+                    color: #fff;
+                    font-size: 0.75em;
+                }
+            }
+        }
+        .accordion-button {
+            padding: 0.75em;
+            margin-left: -55px;
+            background-color: transparent;
+            &::after {
+                display: none;
+            }
+        }
+        .accordion-body {
+            padding-top: 0;
+            font-size: 20px;
+            font-family: 'PontanoSans', sans-serif;
+        }
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+        .accordion-button:not(.collapsed) {
+            color: inherit;
+            background-color: inherit;
+            box-shadow: none;
+        }
+        .accordion-button:not(.collapsed) + .icon {
+            box-shadow: 0px 0px 0px 2px #fff, 0px 0px 0px 4px #aa307d;
+        }
+        .accordion-button,
+        .accordion-body {
+            padding-left: 70px;
+            padding-right: 0;
+        }
+    }
+    .accordion {
+        position: relative;
+        &::before {
+            content: '';
+            z-index: 0;
+            position: absolute;
+            left: 27.5px;
+            top: 0;
+            display: block;
+            width: 2px;
+            height: calc(100% - 15px);
+            background-color: $main_color;
+        }
+    }
+}

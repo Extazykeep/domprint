@@ -1,0 +1,24 @@
+#discounts-and-sales {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    .discount-item {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        &__content {
+            flex-grow: 1;
+            margin-bottom: 1.4em;
+            ul {
+                padding-left: 1em;
+            }
+            li {
+                list-style-type: '✓';
+                &::marker {
+                    color: $accent_color;
+                    font-size: 1.4em;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

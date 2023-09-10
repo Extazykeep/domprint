@@ -1,0 +1,14 @@
+#footer {
+    border-top: 4px solid $main_color;
+    color: #aaa;
+    position: relative;
+    .footer-content {
+        position: relative;
+        z-index: 1;
+    }
+    .footer-title {
+        border-bottom: 1px dotted grey;
+        display: inline;
+        text-align: center;
+    }
+}

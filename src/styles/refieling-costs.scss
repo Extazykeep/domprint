@@ -1,0 +1,14 @@
+#refieling-costs {
+    .refieling-list {
+        list-style-type: none;
+        font-family: 'PontanoSans', sans-serif;
+        li {
+            position: relative;
+            &::before {
+                content: '✓';
+                color: #ffc107;
+                margin-right: 0.5em;
+            }
+        }
+    }
+}

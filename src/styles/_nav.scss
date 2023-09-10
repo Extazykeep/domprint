@@ -1,0 +1,109 @@
+.nav {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-top: 4px solid $main_color;
+    padding: 6px 0;
+    z-index: 10;
+    border-bottom: 1px solid #f1f1f1;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__logo {
+        a {
+            div {
+                font-family: 'Oswald', sans-serif;
+                font-size: 2em;
+                color: $main_color;
+            }
+            p {
+                line-height: 1;
+            }
+            i {
+                font-family: 'Arial', sans-serif;
+                font-size: 15px;
+            }
+        }
+    }
+    &__phone {
+        color: $main_color;
+        padding: 0 1em;
+        font-family: 'Pontano-sans', sans-serif;
+        font-size: calc(1.25em + 0.3vw);
+        strong {
+            font-weight: 700;
+        }
+    }
+    &__schedule {
+        @media (min-width: 1200px) {
+            font-size: 1.25em;
+        }
+        @media (min-width: 1400px) {
+            font-size: 1.35em;
+        }
+    }
+    &__mobile-info {
+        position: absolute;
+        background-color: rgb(232, 198, 220);
+        width: 100%;
+        left: 0;
+        z-index: 3;
+        top: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s, transform 0.4s;
+        transform: translateY(0);
+        padding: 0 5%;
+        @media (min-width: 480px) {
+            padding-left: 25%;
+        }
+        @media (min-width: 576px) {
+            font-size: 1.25em;
+        }
+    }
+    &__burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: none;
+        background-color: $main_color;
+        align-self: center;
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+        padding: 10px 5px;
+        span {
+            height: 3px;
+            width: 100%;
+            background-color: #fff;
+            transition: all 0.3s;
+            &:first-child {
+                transform-origin: right top;
+            }
+            &:last-child {
+                transform-origin: left bottom;
+            }
+        }
+    }
+    &.active {
+        .nav__mobile-info {
+            max-height: 260px;
+            transform: translateY(-20px);
+        }
+        .nav__burger {
+            span:first-child {
+                transform: rotate(-45deg) translate(8px, 6px);
+                width: 50%;
+            }
+            span:nth-child(2) {
+                transform: rotate(45deg);
+            }
+            span:last-child {
+                width: 50%;
+                transform: rotate(-45deg) translate(2px, 6px);
+            }
+        }
+    }
+}
