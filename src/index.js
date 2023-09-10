@@ -13,6 +13,7 @@ import appNav from './components/appNav';
 import animateNumbers from './components/animateNumbers';
 import navHeightObserver from './components/navHeightObserver';
 import './components/odometer';
+import './styles/odometer.scss';
 import swiperInit from './components/swiperInit';
 import scrollTopBtnObserver from './components/scrollTopBtnObserver';
 
